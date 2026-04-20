@@ -30,6 +30,7 @@ import TriviaQuiz from './pages/games/TriviaQuiz';
 import DrawAndGuess from './pages/games/DrawAndGuess';
 import Chess from './pages/games/Chess';
 import MultiplayerSnake from './pages/games/MultiplayerSnake';
+import ArrowLauncher from './pages/games/ArrowLauncher';
 
 function App() {
   const currentTheme = useSelector((state) => state.theme.currentTheme);
@@ -46,8 +47,8 @@ function App() {
               key={theme.id}
               onClick={() => dispatch(setTheme(theme.id))}
               className={`px-3 py-1 text-xs rounded-full transition-all ${currentTheme === theme.id
-                  ? 'bg-white text-black font-bold'
-                  : 'bg-white/10 text-white hover:bg-white/20'
+                ? 'bg-white text-black font-bold'
+                : 'bg-white/10 text-white hover:bg-white/20'
                 }`}
               title={theme.name}
             >
@@ -60,6 +61,7 @@ function App() {
           {/* Dashboard */}
           <Route path="/" element={<Dashboard />} />
           {/* ... existing routes ... */}
+          <Route path="/game/arrow-launcher" element={<ArrowLauncher />} />
           <Route path="/game/:gameId" element={<GameSelection />} />
           <Route path="/room/:roomId" element={<GameRoom />} />
           <Route path="/game/sliding-puzzle" element={<SlidingPuzzle />} />

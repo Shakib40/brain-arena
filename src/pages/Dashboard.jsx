@@ -138,6 +138,16 @@ const Dashboard = () => {
           maxPlayers: 1,
           gameType: 'puzzle',
           mode: 'single'
+        },
+        {
+          id: 'arrow-launcher',
+          name: 'Arrow Launcher',
+          description: 'Precision archery challenge: hit moving targets!',
+          icon: 'emoji',
+          emoji: 'emoji',
+          maxPlayers: 1,
+          gameType: 'action',
+          mode: 'single'
         }
       ]
     },
@@ -202,6 +212,7 @@ const Dashboard = () => {
       'tower-of-hanoi': '🗼️',
       '2048': '📊',
       'nonogram': '🖼️',
+      'arrow-launcher': '🏹',
       'trivia-quiz': '🤓',
       'draw-and-guess': '🎨',
       'chess': '♟️',
