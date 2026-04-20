@@ -1,0 +1,101 @@
+🧩
+Single + Multi
+Sliding puzzle
+
+15-puzzle tile shuffler with move counter and timer
+
+🃏
+Single + Multi
+Memory match
+
+Flip cards to find matching pairs, track best score
+
+🖼️
+Single player
+Jigsaw puzzle
+
+Drag-and-drop image pieces with snap-to-grid
+
+🔢
+Single player
+Sudoku
+
+9×9 grid with validation, hints, and difficulty levels
+
+Word & language
+
+🔤
+Single + Multi
+Wordle clone
+
+Guess the 5-letter word in 6 tries with color hints
+
+📰
+Single player
+Crossword
+
+Across/down grid with clues and auto-check
+
+🔍
+Single player
+Word search
+
+Highlight hidden words in a letter grid
+
+🔀
+Multiplayer
+Anagram solver
+
+Rearrange scrambled letters to form words
+
+Logic & strategy
+
+💣
+Single player
+Minesweeper
+
+Click tiles, avoid mines, use number logic
+
+🗼
+Single player
+Tower of Hanoi
+
+Move disks with drag-and-drop and step counter
+
+🟨
+Single player
+2048
+
+Swipe tiles to merge numbers and reach 2048
+
+🖤
+Single player
+Nonogram
+
+Fill grid cells from row/column number clues
+
+Multiplayer / real-time
+
+❓
+Multiplayer
+Trivia quiz
+
+Live buzzer rounds with score leaderboard via WebSocket
+
+🖌️
+Multiplayer
+Draw & guess
+
+One player draws, others guess the word in real time
+
+♟️
+Single + Multi
+Chess
+
+Full rules, legal move validation, vs AI or friend
+
+🐍
+Multiplayer
+Multiplayer snake
+
+Compete on same board, last snake wins

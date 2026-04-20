@@ -1,0 +1,137 @@
+
+<style>
+  .pg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; padding: 1rem 0; }
+  .pg-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.1rem; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+  .pg-card:hover { border-color: var(--color-border-primary); background: var(--color-background-secondary); }
+  .pg-badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+  .badge-single { background: #E1F5EE; color: #085041; }
+  .badge-multi  { background: #EEEDFE; color: #3C3489; }
+  .badge-both   { background: #FAEEDA; color: #633806; }
+  .pg-icon { font-size: 24px; margin-bottom: 6px; display: block; }
+  .pg-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .pg-desc  { font-size: 12px; color: var(--color-text-secondary); margin: 0; line-height: 1.5; }
+  .section-label { font-size: 12px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; margin: 1.5rem 0 0.5rem; }
+  .legend { display: flex; gap: 16px; padding: 0.5rem 0 0; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-secondary); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+</style>
+
+<h2 class="sr-only">Puzzle games you can build with React.js — single and multiplayer options</h2>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Single player</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Multiplayer</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#BA7517"></div> Both modes</div>
+</div>
+
+<p class="section-label">Classic puzzles</p>
+<div class="pg-grid">
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Sliding Puzzle (15-puzzle) in React.js with complete code')">
+    <span class="pg-icon">🧩</span>
+    <span class="pg-badge badge-both">Single + Multi</span>
+    <p class="pg-title">Sliding puzzle</p>
+    <p class="pg-desc">15-puzzle tile shuffler with move counter and timer</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Memory Card Match game in React.js with complete code')">
+    <span class="pg-icon">🃏</span>
+    <span class="pg-badge badge-both">Single + Multi</span>
+    <p class="pg-title">Memory match</p>
+    <p class="pg-desc">Flip cards to find matching pairs, track best score</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Jigsaw Puzzle game in React.js with drag and drop')">
+    <span class="pg-icon">🖼️</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Jigsaw puzzle</p>
+    <p class="pg-desc">Drag-and-drop image pieces with snap-to-grid</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Sudoku game in React.js with complete code')">
+    <span class="pg-icon">🔢</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Sudoku</p>
+    <p class="pg-desc">9×9 grid with validation, hints, and difficulty levels</p>
+  </div>
+</div>
+
+<p class="section-label">Word & language</p>
+<div class="pg-grid">
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Wordle clone in React.js with complete code')">
+    <span class="pg-icon">🔤</span>
+    <span class="pg-badge badge-both">Single + Multi</span>
+    <p class="pg-title">Wordle clone</p>
+    <p class="pg-desc">Guess the 5-letter word in 6 tries with color hints</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Crossword Puzzle in React.js with complete code')">
+    <span class="pg-icon">📰</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Crossword</p>
+    <p class="pg-desc">Across/down grid with clues and auto-check</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Word Search puzzle game in React.js')">
+    <span class="pg-icon">🔍</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Word search</p>
+    <p class="pg-desc">Highlight hidden words in a letter grid</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build an Anagram puzzle game in React.js with complete code')">
+    <span class="pg-icon">🔀</span>
+    <span class="pg-badge badge-multi">Multiplayer</span>
+    <p class="pg-title">Anagram solver</p>
+    <p class="pg-desc">Rearrange scrambled letters to form words</p>
+  </div>
+</div>
+
+<p class="section-label">Logic & strategy</p>
+<div class="pg-grid">
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Minesweeper game in React.js with complete code')">
+    <span class="pg-icon">💣</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Minesweeper</p>
+    <p class="pg-desc">Click tiles, avoid mines, use number logic</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Tower of Hanoi game in React.js with animation')">
+    <span class="pg-icon">🗼</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Tower of Hanoi</p>
+    <p class="pg-desc">Move disks with drag-and-drop and step counter</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a 2048 game in React.js with complete code')">
+    <span class="pg-icon">🟨</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">2048</p>
+    <p class="pg-desc">Swipe tiles to merge numbers and reach 2048</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Nonogram/Picross puzzle in React.js')">
+    <span class="pg-icon">🖤</span>
+    <span class="pg-badge badge-single">Single player</span>
+    <p class="pg-title">Nonogram</p>
+    <p class="pg-desc">Fill grid cells from row/column number clues</p>
+  </div>
+</div>
+
+<p class="section-label">Multiplayer / real-time</p>
+<div class="pg-grid">
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a multiplayer Trivia Quiz game in React.js with socket.io')">
+    <span class="pg-icon">❓</span>
+    <span class="pg-badge badge-multi">Multiplayer</span>
+    <p class="pg-title">Trivia quiz</p>
+    <p class="pg-desc">Live buzzer rounds with score leaderboard via WebSocket</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a multiplayer Pictionary drawing game in React.js')">
+    <span class="pg-icon">🖌️</span>
+    <span class="pg-badge badge-multi">Multiplayer</span>
+    <p class="pg-title">Draw & guess</p>
+    <p class="pg-desc">One player draws, others guess the word in real time</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a Chess game in React.js with two-player mode')">
+    <span class="pg-icon">♟️</span>
+    <span class="pg-badge badge-both">Single + Multi</span>
+    <p class="pg-title">Chess</p>
+    <p class="pg-desc">Full rules, legal move validation, vs AI or friend</p>
+  </div>
+  <div class="pg-card" onclick="sendPrompt('Show me how to build a multiplayer Snake game in React.js with WebSocket')">
+    <span class="pg-icon">🐍</span>
+    <span class="pg-badge badge-multi">Multiplayer</span>
+    <p class="pg-title">Multiplayer snake</p>
+    <p class="pg-desc">Compete on same board, last snake wins</p>
+  </div>
+</div>

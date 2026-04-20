@@ -1,0 +1,7 @@
+// Create react-project using latest version, use nvm 24 for latest react run
+
+Project is  Multiple 2d game with multi player
+
+1. show dashboard with list of game avilable
+2. onclick of any game choose mode, single or multiple,
+3. start game
