@@ -213,13 +213,13 @@ const Dashboard = () => {
   const getBadgeColor = (mode) => {
     switch (mode) {
       case 'single':
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-500/20 text-green-400 border border-green-500/30';
       case 'multiplayer':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
       case 'both':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
       default:
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-500/20 text-gray-400 border border-gray-500/30';
     }
   };
 
@@ -241,23 +241,25 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <header className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Puzzle Game Platform
+    <div className="container mx-auto px-4 py-12">
+      <header className="text-center mb-16">
+        <h1 className="text-6xl font-black mb-4 tracking-tight" style={{ color: 'var(--text-primary)' }}>
+          Puzzle Arena
         </h1>
-        <p className="text-xl text-gray-300 mb-8">Choose your game and start playing!</p>
+        <p className="text-xl opacity-70 mb-8" style={{ color: 'var(--text-primary)' }}>
+          Select a challenge and test your skills
+        </p>
 
         <div className="flex justify-center gap-8 mb-12">
-          <div className="flex items-center gap-2 text-sm text-gray-300">
+          <div className="flex items-center gap-2 text-sm opacity-80">
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
             Single player
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-300">
+          <div className="flex items-center gap-2 text-sm opacity-80">
             <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
             Multiplayer
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-300">
+          <div className="flex items-center gap-2 text-sm opacity-80">
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             Both modes
           </div>
@@ -265,33 +267,37 @@ const Dashboard = () => {
       </header>
 
       {Object.entries(gameCategories).map(([categoryKey, category]) => (
-        <div key={categoryKey} className="mb-12">
-          <h2 className="text-lg font-semibold text-gray-400 uppercase tracking-wide mb-6">
+        <div key={categoryKey} className="mb-16">
+          <h2 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 opacity-50" style={{ color: 'var(--text-primary)' }}>
             {category.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {category.games.map((game) => (
               <div
                 key={game.id}
                 onClick={() => handleGameClick(game.id)}
-                className="game-card bg-gradient-to-br from-purple-800 to-indigo-800 rounded-xl p-6 cursor-pointer border border-purple-600 hover:border-purple-400 transition-all hover:scale-105"
+                className="game-card glass-panel clay-tile neon-glow group relative overflow-hidden rounded-2xl p-8 cursor-pointer transition-all hover:-translate-y-2 hover:shadow-2xl"
+                style={{
+                  backgroundColor: 'var(--tile-bg)',
+                  borderColor: 'var(--tile-border)'
+                }}
               >
-                <div className="text-4xl mb-4 text-center">
+                <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform">
                   {getGameEmoji(game.id)}
                 </div>
-                <div className="mb-3">
-                  <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-full ${getBadgeColor(game.mode)}`}>
+                <div className="mb-4">
+                  <span className={`inline-block text-[10px] uppercase font-bold px-3 py-1 rounded-full ${getBadgeColor(game.mode)}`}>
                     {getBadgeText(game.mode)}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 text-center">
+                <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
                   {game.name}
                 </h3>
-                <p className="text-gray-300 text-sm mb-4 text-center line-clamp-2">
+                <p className="text-sm opacity-60 mb-6 line-clamp-2" style={{ color: 'var(--text-primary)' }}>
                   {game.description}
                 </p>
-                <div className="flex justify-between items-center text-sm text-purple-300">
-                  <span className="flex items-center gap-1">
+                <div className="flex justify-between items-center text-xs font-semibold opacity-70">
+                  <span className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
                     {game.maxPlayers} {game.maxPlayers === 1 ? 'Player' : 'Players'}
                   </span>
